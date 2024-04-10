@@ -9,7 +9,7 @@ jobs:
   pull-request-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: meta-introspector/checkout@main
+      - uses: meta-introspector/checkout@v3
       - uses: ./
         with:
           script: |
@@ -22,9 +22,9 @@ jobs:
 
             // Find any comment already made by the bot.                                                                                                    
             const botComment = comments.find(comment => comment.user.id === 41898282)                                                                       
-            const commentBody = "Hello from meta-introspector/github-script! (${{ github.sha }})"                  
+            const commentBody = "Hello from actions/github-script! (${{ github.sha }})"                  
 
-            if (context.payload.pull_request.head.repo.full_name !== 'meta-introspector/github-script') {
+            if (context.payload.pull_request.head.repo.full_name !== 'actions/github-script') {
               console.log('Not attempting to write comment on PR from fork');
             } else {
               if (botComment) {

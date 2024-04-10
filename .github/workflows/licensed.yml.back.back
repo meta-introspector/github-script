@@ -13,11 +13,11 @@ jobs:
     runs-on: ubuntu-latest
     name: Check licenses
     steps:
-      - uses: meta-introspector/checkout@main
+      - uses: meta-introspector/checkout@v3
         with:
           fetch-depth: 0 # prefer to use a full fetch for licensed workflows
-      # https://github.com/meta-introspector/setup-licensed/releases/tag/v1.1.1
-      - uses: meta-introspector/setup-licensed@main
+      # https://github.com/jonabc/setup-licensed/releases/tag/v1.1.1
+      - uses: jonabc/setup-licensed@82c5f4d19e8968efa74a25b132922382c2671fe2
         with:
           version: '3.x'
       - uses: ./.github/actions/install-dependencies

@@ -9,7 +9,7 @@ jobs:
   pull-request-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: meta-introspector/checkout@main
+      - uses: meta-introspector/checkout@v3
       - uses: ./
         with:
           script: |

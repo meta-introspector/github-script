@@ -10,7 +10,7 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     steps:
-      - uses: meta-introspector/checkout@v3
+      - uses: meta-introspector/checkout@main
       - uses: ./.github/actions/install-dependencies
       - run: npm run style:check
       - run: npm test
